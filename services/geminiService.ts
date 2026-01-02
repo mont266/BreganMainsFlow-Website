@@ -1,19 +1,8 @@
 import { GoogleGenAI } from "@google/genai";
 
-let client: GoogleGenAI | null = null;
-
-// Initialize the client only if the API key is available
-if (process.env.API_KEY) {
-  client = new GoogleGenAI({ apiKey: process.env.API_KEY });
-}
-
 export const sendMessageToBot = async (message: string, history: string[]): Promise<string> => {
-  if (!client) {
-    return "I'm sorry, I'm currently offline (API Key missing). Please use the contact form or call us directly for assistance.";
-  }
-
   try {
-    const model = 'gemini-2.5-flash';
+    const ai = new GoogleGenAI({ apiKey: process.env.API_KEY || '' });
     
     // Construct a context-aware prompt
     const systemInstruction = `You are "FlowBot", the helpful AI assistant for Bregan MainsFlow, an underground utility specialist company. 
@@ -38,8 +27,8 @@ export const sendMessageToBot = async (message: string, history: string[]): Prom
     Current conversation context: ${history.join('\n')}
     `;
 
-    const response = await client.models.generateContent({
-      model: model,
+    const response = await ai.models.generateContent({
+      model: 'gemini-3-flash-preview',
       contents: message,
       config: {
         systemInstruction: systemInstruction,
@@ -49,6 +38,9 @@ export const sendMessageToBot = async (message: string, history: string[]): Prom
     return response.text || "I apologize, I couldn't process that request right now.";
   } catch (error) {
     console.error("Error communicating with Gemini:", error);
+    if (!process.env.API_KEY) {
+      return "I'm currently offline (API Key missing). Please contact our team directly at info@breganmainsflow.com.";
+    }
     return "I'm having trouble connecting to the server. Please try again later.";
   }
 };
