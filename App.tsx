@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -10,7 +9,7 @@ import Clients from './components/Clients';
 import Testimonials from './components/Testimonials';
 import Accreditation from './components/Accreditation';
 import Projects from './components/Projects';
-import AIChat from './components/AIChat';
+import LeadGenWidget from './components/AIChat';
 
 const App: React.FC = () => {
   return (
@@ -27,7 +26,7 @@ const App: React.FC = () => {
         <Contact />
       </main>
       <Footer />
-      <AIChat />
+      <LeadGenWidget />
     </div>
   );
 };

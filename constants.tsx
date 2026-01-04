@@ -60,7 +60,7 @@ export const PROJECT_ITEMS: ProjectItem[] = [
     location: 'Berkhamsted',
     category: 'Residential Development',
     description: 'Comprehensive water main installation for a new luxury housing development, ensuring reliable supply for all residents.',
-    imageUrl: 'public/images/BMF_CaseStudy_RiversideGardensBerkhamsted_homepage.jpg',
+    imageUrl: '../public/images/BMF_CaseStudy_RiversideGardensBerkhamsted_homepage.jpg',
   },
   {
     id: 2,
@@ -68,7 +68,7 @@ export const PROJECT_ITEMS: ProjectItem[] = [
     location: 'Braintree',
     category: 'Commercial Infrastructure',
     description: 'Upgrading the entire water network for a bustling industrial park, minimizing disruption to operational businesses.',
-    imageUrl: 'public/images/BMF_CaseStudy_SpringwoodIndustrialEstate_homepage.jpg',
+    imageUrl: '../public/images/BMF_CaseStudy_SpringwoodIndustrialEstate_homepage.jpg',
   },
   {
     id: 3,
@@ -76,7 +76,7 @@ export const PROJECT_ITEMS: ProjectItem[] = [
     location: 'Bedford',
     category: 'Domestic Mains Renewal',
     description: 'Lead pipe replacement and mains renewal for a residential street, improving water quality and pressure for homeowners.',
-    imageUrl: 'public/images/BMF_CaseStudy_TandyCloseBedford_homepage.jpg',
+    imageUrl: '../public/images/BMF_CaseStudy_TandyCloseBedford_homepage.jpg',
   },
   {
     id: 4,
@@ -84,7 +84,7 @@ export const PROJECT_ITEMS: ProjectItem[] = [
     location: 'Northampton',
     category: 'Industrial Fire Main',
     description: 'Installation of a high-capacity fire main system to meet stringent safety regulations for a large industrial complex.',
-    imageUrl: 'public/images/BMF_CaseStudy_KingsHeathIndustrial_homepage.jpg',
+    imageUrl: '../public/images/BMF_CaseStudy_KingsHeathIndustrial_homepage.jpg',
   }
 ];
 

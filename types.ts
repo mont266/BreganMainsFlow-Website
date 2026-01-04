@@ -1,5 +1,3 @@
-
-
 import { ReactNode } from 'react';
 
 export interface NavItem {
@@ -19,13 +17,6 @@ export interface Testimonial {
   date: string;
   content: string;
   rating: number;
-}
-
-// FIX: Added ChatMessage interface
-export interface ChatMessage {
-  role: 'user' | 'model';
-  text: string;
-  timestamp: Date;
 }
 
 export enum SectionId {
