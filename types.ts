@@ -1,4 +1,5 @@
 
+
 import { ReactNode } from 'react';
 
 export interface NavItem {
@@ -53,5 +54,5 @@ export interface ProjectItem {
   location: string;
   category: string;
   description: string;
-  imagePlaceholderColor: string;
+  imageUrl: string;
 }

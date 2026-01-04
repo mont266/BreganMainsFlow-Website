@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import { SectionId } from '../types';
 import { Phone, Mail, Send, MapPin } from 'lucide-react';
+import { SERVICES } from '../constants';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    service: 'General Inquiry',
+    phone: '',
+    service: '',
     message: ''
   });
 
@@ -17,8 +19,8 @@ const Contact: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Simulate form submission
-    alert(`Thank you, ${formData.name}. We have received your inquiry about ${formData.service}.`);
-    setFormData({ name: '', email: '', service: 'General Inquiry', message: '' });
+    alert(`Thank you, ${formData.name}. We have received your inquiry about ${formData.service} and will be in touch shortly.`);
+    setFormData({ name: '', email: '', phone: '', service: '', message: '' });
   };
 
   return (
@@ -84,7 +86,7 @@ const Contact: React.FC = () => {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-2">Full Name</label>
+                  <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-2">Name*</label>
                   <input
                     type="text"
                     id="name"
@@ -92,12 +94,12 @@ const Contact: React.FC = () => {
                     required
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-lg border border-transparent bg-slate-800 text-white placeholder:text-slate-400 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/50 outline-none transition-all"
+                    className="w-full px-4 py-3 rounded-lg border border-slate-300 bg-white text-slate-900 placeholder:text-slate-400 focus:border-brand-500 focus:ring-2 focus:ring-brand-200 outline-none transition-all"
                     placeholder="John Doe"
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-2">Email Address</label>
+                  <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-2">E-mail*</label>
                   <input
                     type="email"
                     id="email"
@@ -105,39 +107,57 @@ const Contact: React.FC = () => {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-lg border border-transparent bg-slate-800 text-white placeholder:text-slate-400 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/50 outline-none transition-all"
+                    className="w-full px-4 py-3 rounded-lg border border-slate-300 bg-white text-slate-900 placeholder:text-slate-400 focus:border-brand-500 focus:ring-2 focus:ring-brand-200 outline-none transition-all"
                     placeholder="john@example.com"
                   />
                 </div>
               </div>
 
-              <div>
-                <label htmlFor="service" className="block text-sm font-medium text-slate-700 mb-2">Service Needed</label>
-                <select
-                  id="service"
-                  name="service"
-                  value={formData.service}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-brand-500 focus:ring-2 focus:ring-brand-200 outline-none transition-all bg-white text-slate-900"
-                >
-                  <option>General Inquiry</option>
-                  <option>Mains Replacement</option>
-                  <option>Leak Detection</option>
-                  <option>Emergency Repair</option>
-                  <option>Commercial Installation</option>
-                </select>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                 <div>
+                  <label htmlFor="service" className="block text-sm font-medium text-slate-700 mb-2">Select Service*</label>
+                  <select
+                    id="service"
+                    name="service"
+                    value={formData.service}
+                    onChange={handleChange}
+                    required
+                    className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-brand-500 focus:ring-2 focus:ring-brand-200 outline-none transition-all bg-white text-slate-900"
+                  >
+                    <option value="" disabled>Select Service*</option>
+                    <option value="General Query">General Query</option>
+                    {SERVICES.map((service) => (
+                      <option key={service.title} value={service.title}>
+                        {service.title}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+                <div>
+                  <label htmlFor="phone" className="block text-sm font-medium text-slate-700 mb-2">Your Phone Number*</label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    required
+                    value={formData.phone}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 rounded-lg border border-slate-300 bg-white text-slate-900 placeholder:text-slate-400 focus:border-brand-500 focus:ring-2 focus:ring-brand-200 outline-none transition-all"
+                    placeholder="01234 567890"
+                  />
+                </div>
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-slate-700 mb-2">Project Details</label>
+                <label htmlFor="message" className="block text-sm font-medium text-slate-700 mb-2">Message*</label>
                 <textarea
                   id="message"
                   name="message"
-                  rows={4}
+                  rows={5}
                   required
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-lg border border-transparent bg-slate-800 text-white placeholder:text-slate-400 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/50 outline-none transition-all resize-none"
+                  className="w-full px-4 py-3 rounded-lg border border-slate-300 bg-white text-slate-900 placeholder:text-slate-400 focus:border-brand-500 focus:ring-2 focus:ring-brand-200 outline-none transition-all resize-none"
                   placeholder="Tell us about your project requirements..."
                 ></textarea>
               </div>
@@ -146,7 +166,7 @@ const Contact: React.FC = () => {
                 type="submit"
                 className="w-full py-3 bg-brand-600 text-white font-bold rounded-lg hover:bg-brand-700 transition-colors shadow-lg shadow-brand-500/30 hover:shadow-xl flex items-center justify-center gap-2 transform hover:-translate-y-0.5"
               >
-                Send Request <Send className="w-5 h-5" />
+                SEND MESSAGE
               </button>
             </form>
           </div>

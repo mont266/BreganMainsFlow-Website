@@ -1,7 +1,10 @@
 
+
+
 import React from 'react';
 import { NavItem, ServiceItem, Testimonial, SectionId, Client, Accreditation, ProjectItem } from './types';
 import { Building2, Cog, Home, MoveHorizontal, Network, Replace, Workflow } from 'lucide-react';
+import { ClientLogos, AccreditationLogos } from './assets/images';
 
 export const NAV_ITEMS: NavItem[] = [
   { label: 'Home', href: `#${SectionId.HOME}` },
@@ -53,27 +56,35 @@ export const SERVICES: ServiceItem[] = [
 export const PROJECT_ITEMS: ProjectItem[] = [
   {
     id: 1,
-    title: 'Royal Estate Connection',
-    location: 'London / International',
-    category: 'Specialist Installation',
-    description: 'High-security water main design and installation for the Queen of Kuwait project.',
-    imagePlaceholderColor: 'bg-brand-900',
+    title: 'Riverside Gardens',
+    location: 'Berkhamsted',
+    category: 'Residential Development',
+    description: 'Comprehensive water main installation for a new luxury housing development, ensuring reliable supply for all residents.',
+    imageUrl: 'public/images/BMF_CaseStudy_RiversideGardensBerkhamsted_homepage.jpg',
   },
   {
     id: 2,
-    title: 'Municipal Main Replacement',
-    location: 'Stevenage Borough',
-    category: 'Commercial',
-    description: 'Redesign of 5km of aging municipal pipes using trenchless technology.',
-    imagePlaceholderColor: 'bg-slate-800',
+    title: 'Springwood Industrial Estate',
+    location: 'Braintree',
+    category: 'Commercial Infrastructure',
+    description: 'Upgrading the entire water network for a bustling industrial park, minimizing disruption to operational businesses.',
+    imageUrl: 'public/images/BMF_CaseStudy_SpringwoodIndustrialEstate_homepage.jpg',
   },
   {
     id: 3,
-    title: 'District Heating Network',
-    location: 'Cambridge',
-    category: 'Infrastructure',
-    description: 'Specialized underground ducting for new sustainable heating solutions.',
-    imagePlaceholderColor: 'bg-brand-700',
+    title: 'Tandy Close',
+    location: 'Bedford',
+    category: 'Domestic Mains Renewal',
+    description: 'Lead pipe replacement and mains renewal for a residential street, improving water quality and pressure for homeowners.',
+    imageUrl: 'public/images/BMF_CaseStudy_TandyCloseBedford_homepage.jpg',
+  },
+  {
+    id: 4,
+    title: 'Kings Heath Industrial Estate',
+    location: 'Northampton',
+    category: 'Industrial Fire Main',
+    description: 'Installation of a high-capacity fire main system to meet stringent safety regulations for a large industrial complex.',
+    imageUrl: 'public/images/BMF_CaseStudy_KingsHeathIndustrial_homepage.jpg',
   }
 ];
 
@@ -118,23 +129,23 @@ export const TESTIMONIALS: Testimonial[] = [
 export const CLIENTS: Client[] = [
   {
     name: 'Anglian Water',
-    logoUrl: 'images/anglian-water-logo.png',
+    logoUrl: ClientLogos.anglianWaterLogo,
   },
   {
     name: 'Thames Water',
-    logoUrl: 'images/thames-water-logo.png',
+    logoUrl: ClientLogos.thamesWaterLogo,
   },
   {
     name: 'Affinity Water',
-    logoUrl: 'images/affinity-water-logo.png',
+    logoUrl: ClientLogos.affinityWaterLogo,
   },
 ];
 
 export const ACCREDITATIONS: Accreditation[] = [
-  { name: 'NRSWA New Roads & Street Works Act Accredited', logoUrl: 'public/images/nrswa-logo.png' },
-  { name: 'WIAPS Water Industry Approved Plumbers Scheme', logoUrl: 'public/images/wiaps-logo.png' },
-  { name: 'WIRS Water Industry Registration Scheme', logoUrl: 'public/images/wirs-logo.png' },
-  { name: 'WRAS Water Regulations Advisory Scheme', logoUrl: 'public/images/wras-logo.png' },
-  { name: 'Achilles UVDB Audited', logoUrl: 'public/images/achilles-audited-logo.png' },
-  { name: 'Achilles UVDB Qualified', logoUrl: 'public/images/achilles-qualified-logo.png' },
+  { name: 'NRSWA New Roads & Street Works Act Accredited', logoUrl: AccreditationLogos.nrswaLogo },
+  { name: 'WIAPS Water Industry Approved Plumbers Scheme', logoUrl: AccreditationLogos.wiapsLogo },
+  { name: 'WIRS Water Industry Registration Scheme', logoUrl: AccreditationLogos.wirsLogo },
+  { name: 'WRAS Water Regulations Advisory Scheme', logoUrl: AccreditationLogos.wrasLogo },
+  { name: 'Achilles UVDB Audited', logoUrl: AccreditationLogos.achillesAuditedLogo },
+  { name: 'Achilles UVDB Qualified', logoUrl: AccreditationLogos.achillesQualifiedLogo },
 ];

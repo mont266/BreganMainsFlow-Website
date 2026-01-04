@@ -1,6 +1,7 @@
 import React from 'react';
 import { SectionId } from '../types';
 import { CheckCircle, Award, HardHat, ClipboardCheck, Users, TrendingUp } from 'lucide-react';
+import { AboutImages } from '../assets/images';
 
 const About: React.FC = () => {
   return (
@@ -38,14 +39,14 @@ const About: React.FC = () => {
           <div className="relative mt-12 lg:mt-0">
              <div className="grid grid-cols-2 gap-4">
               <img 
-                src="public/images/about-site-1.jpg" 
+                src={AboutImages.aboutSite1} 
                 alt="Bregan MainsFlow Team Site" 
-                className="rounded-2xl shadow-lg transform translate-y-8 object-cover h-72 w-full bg-slate-100"
+                className="rounded-2xl shadow-lg transform translate-y-8 object-cover h-96 w-full bg-slate-100"
               />
               <img 
-                src="public/images/about-site-2.jpg" 
+                src={AboutImages.aboutSite2} 
                 alt="Water Infrastructure Project" 
-                className="rounded-2xl shadow-lg object-cover h-72 w-full bg-slate-100"
+                className="rounded-2xl shadow-lg object-cover h-96 w-full bg-slate-100"
               />
             </div>
             {/* Stat Card */}
