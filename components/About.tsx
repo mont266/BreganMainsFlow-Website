@@ -38,12 +38,12 @@ const About: React.FC = () => {
           <div className="relative mt-12 lg:mt-0">
              <div className="grid grid-cols-2 gap-4">
               <img 
-                src="/images/about-site-1.jpg" 
+                src="public/images/about-site-1.jpg" 
                 alt="Bregan MainsFlow Team Site" 
                 className="rounded-2xl shadow-lg transform translate-y-8 object-cover h-72 w-full bg-slate-100"
               />
               <img 
-                src="/images/about-site-2.jpg" 
+                src="public/images/about-site-2.jpg" 
                 alt="Water Infrastructure Project" 
                 className="rounded-2xl shadow-lg object-cover h-72 w-full bg-slate-100"
               />
