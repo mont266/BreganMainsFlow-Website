@@ -118,23 +118,23 @@ export const TESTIMONIALS: Testimonial[] = [
 export const CLIENTS: Client[] = [
   {
     name: 'Anglian Water',
-    logoUrl: '/public/images/anglian-water-logo.png',
+    logoUrl: '/images/anglian-water-logo.png',
   },
   {
     name: 'Thames Water',
-    logoUrl: '/public/images/thames-water-logo.png',
+    logoUrl: '/images/thames-water-logo.png',
   },
   {
     name: 'Affinity Water',
-    logoUrl: '/public/images/affinity-water-logo.png',
+    logoUrl: '/images/affinity-water-logo.png',
   },
 ];
 
 export const ACCREDITATIONS: Accreditation[] = [
-  { name: 'NRSWA New Roads & Street Works Act Accredited', logoUrl: '/public/images/nrswa-logo.png' },
-  { name: 'WIAPS Water Industry Approved Plumbers Scheme', logoUrl: '/public/images/wiaps-logo.png' },
-  { name: 'WIRS Water Industry Registration Scheme', logoUrl: '/public/images/wirs-logo.png' },
-  { name: 'WRAS Water Regulations Advisory Scheme', logoUrl: '/public/images/wras-logo.png' },
-  { name: 'Achilles UVDB Audited', logoUrl: '/public/images/achilles-audited-logo.png' },
-  { name: 'Achilles UVDB Qualified', logoUrl: '/public/images/achilles-qualified-logo.png' },
+  { name: 'NRSWA New Roads & Street Works Act Accredited', logoUrl: '/images/nrswa-logo.png' },
+  { name: 'WIAPS Water Industry Approved Plumbers Scheme', logoUrl: '/images/wiaps-logo.png' },
+  { name: 'WIRS Water Industry Registration Scheme', logoUrl: '/images/wirs-logo.png' },
+  { name: 'WRAS Water Regulations Advisory Scheme', logoUrl: '/images/wras-logo.png' },
+  { name: 'Achilles UVDB Audited', logoUrl: '/images/achilles-audited-logo.png' },
+  { name: 'Achilles UVDB Qualified', logoUrl: '/images/achilles-qualified-logo.png' },
 ];
