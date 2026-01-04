@@ -14,17 +14,17 @@ const Clients: React.FC = () => {
             We have over 30 years experience working on a variety of different projects for some very high profile clients.
           </p>
         </div>
-        <div className="flex justify-center items-stretch gap-8 md:gap-12 flex-wrap">
+        <div className="flex justify-center items-center gap-x-12 sm:gap-x-16 gap-y-10 flex-wrap">
           {CLIENTS.map((client) => (
             <div 
               key={client.name} 
-              className="group bg-white p-6 border border-slate-200 rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1 flex items-center justify-center"
-              style={{ minWidth: '200px' }}
+              className="group transition-all duration-300"
+              title={client.name}
             >
               <img
                 src={client.logoUrl}
                 alt={`${client.name} logo`}
-                className="max-h-16 w-auto object-contain"
+                className="h-10 object-contain filter grayscale group-hover:grayscale-0 group-hover:scale-105"
               />
             </div>
           ))}

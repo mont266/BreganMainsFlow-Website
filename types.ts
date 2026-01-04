@@ -1,3 +1,4 @@
+
 import { ReactNode } from 'react';
 
 export interface NavItem {
@@ -19,6 +20,7 @@ export interface Testimonial {
   rating: number;
 }
 
+// FIX: Added ChatMessage interface
 export interface ChatMessage {
   role: 'user' | 'model';
   text: string;
@@ -43,4 +45,13 @@ export interface Client {
 export interface Accreditation {
   name: string;
   logoUrl: string;
+}
+
+export interface ProjectItem {
+  id: number;
+  title: string;
+  location: string;
+  category: string;
+  description: string;
+  imagePlaceholderColor: string;
 }

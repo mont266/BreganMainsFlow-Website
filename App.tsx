@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -5,10 +6,10 @@ import Services from './components/Services';
 import About from './components/About';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import AIChat from './components/AIChat';
 import Clients from './components/Clients';
 import Testimonials from './components/Testimonials';
 import Accreditation from './components/Accreditation';
+import Projects from './components/Projects';
 
 const App: React.FC = () => {
   return (
@@ -19,12 +20,12 @@ const App: React.FC = () => {
         <Clients />
         <Services />
         <About />
+        <Projects />
         <Accreditation />
         <Testimonials />
         <Contact />
       </main>
       <Footer />
-      <AIChat />
     </div>
   );
 };

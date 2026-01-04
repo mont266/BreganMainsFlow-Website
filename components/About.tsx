@@ -38,14 +38,14 @@ const About: React.FC = () => {
           <div className="relative mt-12 lg:mt-0">
              <div className="grid grid-cols-2 gap-4">
               <img 
-                src="https://picsum.photos/400/500?random=20" 
+                src="/images/about-site-1.jpg" 
                 alt="Bregan MainsFlow Team Site" 
-                className="rounded-2xl shadow-lg transform translate-y-8 object-cover h-72 w-full"
+                className="rounded-2xl shadow-lg transform translate-y-8 object-cover h-72 w-full bg-slate-100"
               />
               <img 
-                src="https://picsum.photos/400/500?random=21" 
+                src="/images/about-site-2.jpg" 
                 alt="Water Infrastructure Project" 
-                className="rounded-2xl shadow-lg object-cover h-72 w-full"
+                className="rounded-2xl shadow-lg object-cover h-72 w-full bg-slate-100"
               />
             </div>
             {/* Stat Card */}

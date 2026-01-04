@@ -1,13 +1,14 @@
+
 import React from 'react';
-import { NavItem, ServiceItem, Testimonial, SectionId, Client, Accreditation } from './types';
+import { NavItem, ServiceItem, Testimonial, SectionId, Client, Accreditation, ProjectItem } from './types';
 import { Building2, Cog, Home, MoveHorizontal, Network, Replace, Workflow } from 'lucide-react';
 
 export const NAV_ITEMS: NavItem[] = [
   { label: 'Home', href: `#${SectionId.HOME}` },
   { label: 'Services', href: `#${SectionId.SERVICES}` },
   { label: 'About', href: `#${SectionId.ABOUT}` },
-  { label: 'Testimonials', href: `#${SectionId.TESTIMONIALS}` },
   { label: 'Projects', href: `#${SectionId.PROJECTS}` },
+  { label: 'Testimonials', href: `#${SectionId.TESTIMONIALS}` },
   { label: 'Contact', href: `#${SectionId.CONTACT}` },
 ];
 
@@ -29,24 +30,51 @@ export const SERVICES: ServiceItem[] = [
   },
   {
     title: 'Trenchless Technology',
-    description: 'Directional drilling. Grundomat moling.',
+    description: 'Directional drilling. Grundomat moling for minimal surface disruption.',
     icon: <MoveHorizontal className="w-6 h-6" />,
   },
   {
     title: 'Underground Ducting',
-    description: 'Design, planning and installation.',
+    description: 'Design, planning and professional installation for utility networks.',
     icon: <Cog className="w-6 h-6" />,
   },
   {
     title: 'Lead Pipe Replacement',
-    description: 'Upgrade lead pipe to new MDPE.',
+    description: 'Modernizing water supplies by upgrading lead pipe to new MDPE.',
     icon: <Replace className="w-6 h-6" />,
   },
   {
     title: 'Pipework Commissioning',
-    description: 'Trackside repair, maintenance and re-routing.',
+    description: 'Trackside repair, maintenance and specialized re-routing services.',
     icon: <Workflow className="w-6 h-6" />,
   },
+];
+
+export const PROJECT_ITEMS: ProjectItem[] = [
+  {
+    id: 1,
+    title: 'Royal Estate Connection',
+    location: 'London / International',
+    category: 'Specialist Installation',
+    description: 'High-security water main design and installation for the Queen of Kuwait project.',
+    imagePlaceholderColor: 'bg-brand-900',
+  },
+  {
+    id: 2,
+    title: 'Municipal Main Replacement',
+    location: 'Stevenage Borough',
+    category: 'Commercial',
+    description: 'Redesign of 5km of aging municipal pipes using trenchless technology.',
+    imagePlaceholderColor: 'bg-slate-800',
+  },
+  {
+    id: 3,
+    title: 'District Heating Network',
+    location: 'Cambridge',
+    category: 'Infrastructure',
+    description: 'Specialized underground ducting for new sustainable heating solutions.',
+    imagePlaceholderColor: 'bg-brand-700',
+  }
 ];
 
 export const TESTIMONIALS: Testimonial[] = [
@@ -90,24 +118,23 @@ export const TESTIMONIALS: Testimonial[] = [
 export const CLIENTS: Client[] = [
   {
     name: 'Anglian Water',
-    logoUrl: '/images/anglian-water-logo.png',
+    logoUrl: '/public/images/anglian-water-logo.png',
   },
   {
     name: 'Thames Water',
-    logoUrl: '/images/thames-water-logo.png',
+    logoUrl: '/public/images/thames-water-logo.png',
   },
   {
     name: 'Affinity Water',
-    logoUrl: '/images/affinity-water-logo.png',
+    logoUrl: '/public/images/affinity-water-logo.png',
   },
 ];
 
 export const ACCREDITATIONS: Accreditation[] = [
-  // NOTE: Replace these placeholder URLs with your actual logo files
-  { name: 'NRSWA New Roads & Street Works Act Accredited', logoUrl: 'https://i.imgur.com/qB4L5gD.png' },
-  { name: 'WIAPS Water Industry Approved Plumbers Scheme', logoUrl: 'https://i.imgur.com/3hD6r47.png' },
-  { name: 'WIRS Water Industry Registration Scheme', logoUrl: 'https://i.imgur.com/J3eB6f6.png' },
-  { name: 'WRAS Water Regulations Advisory Scheme', logoUrl: 'https://i.imgur.com/0s7fW92.png' },
-  { name: 'Achilles UVDB Audited', logoUrl: 'https://i.imgur.com/A6jX9gH.png' },
-  { name: 'Achilles UVDB Qualified', logoUrl: 'https://i.imgur.com/cOFf8oV.png' },
+  { name: 'NRSWA New Roads & Street Works Act Accredited', logoUrl: '/public/images/nrswa-logo.png' },
+  { name: 'WIAPS Water Industry Approved Plumbers Scheme', logoUrl: '/public/images/wiaps-logo.png' },
+  { name: 'WIRS Water Industry Registration Scheme', logoUrl: '/public/images/wirs-logo.png' },
+  { name: 'WRAS Water Regulations Advisory Scheme', logoUrl: '/public/images/wras-logo.png' },
+  { name: 'Achilles UVDB Audited', logoUrl: '/public/images/achilles-audited-logo.png' },
+  { name: 'Achilles UVDB Qualified', logoUrl: '/public/images/achilles-qualified-logo.png' },
 ];
